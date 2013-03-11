@@ -1,0 +1,12 @@
+# Xilinx GitIgnore file
+#  The working directory of all the projects must be in a "build" folder
+
+# Ignore build directory
+build/
+
+# Ignore user specific config files
+iseconfig/
+
+# Ignore HTML reports
+*.html
+*_html/

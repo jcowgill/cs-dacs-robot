@@ -1,0 +1,35 @@
+# CLOCK / RESET
+NET "CLK"       LOC = "P44";
+NET "CLR"       LOC = "P33";
+
+# BUFFERED INPUTS
+NET "WRX0"      LOC = "P39";
+NET "WRX1"      LOC = "P40";
+NET "WRX2"      LOC = "P41";
+NET "WRX3"      LOC = "P42";
+
+# LED
+NET "L1"        LOC = "P18";
+NET "L2"        LOC = "P16";
+NET "L3"        LOC = "P14";
+NET "L4"        LOC = "P13";
+NET "L5"        LOC = "P12";
+NET "L6"        LOC = "P8";
+NET "L7"        LOC = "P7";
+NET "L8"        LOC = "P6";
+
+# BUTTON
+NET "B1"        LOC = "P19";
+NET "B2"        LOC = "P20";
+NET "B3"        LOC = "P21";
+NET "B4"        LOC = "P22";
+NET "B5"        LOC = "P23";
+NET "B6"        LOC = "P28";
+NET "B7"        LOC = "P27";
+NET "B8"        LOC = "P29";
+
+# BUFFERED OUTPUTS
+NET "WTX0"      LOC = "P1";
+NET "WTX1"      LOC = "P2";
+NET "WTX2"      LOC = "P3";
+NET "WTX3"      LOC = "P5";
