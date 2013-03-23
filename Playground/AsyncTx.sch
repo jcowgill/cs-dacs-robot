@@ -8,21 +8,20 @@
     <netlist>
         <signal name="FINISHED" />
         <signal name="Q(7:0)" />
-        <signal name="Q(0)" />
+        <signal name="Q(7)" />
         <signal name="AOUT" />
         <signal name="ACTIVE" />
         <signal name="D(7:0)" />
-        <signal name="D(0)" />
         <signal name="D(7)" />
+        <signal name="D(0)" />
         <signal name="XLXN_16" />
         <signal name="SEND" />
         <signal name="XLXN_22" />
         <signal name="XLXN_26" />
         <signal name="CLR" />
         <signal name="CLK" />
-        <signal name="D(6:1)" />
+        <signal name="D(1:6)" />
         <signal name="DATA(5:0)" />
-        <signal name="XLXN_43(7:0)" />
         <port polarity="Output" name="AOUT" />
         <port polarity="Output" name="ACTIVE" />
         <port polarity="Input" name="SEND" />
@@ -138,11 +137,11 @@
             <blockpin signalname="XLXN_26" name="CLR" />
             <blockpin signalname="D(7:0)" name="D(7:0)" />
             <blockpin signalname="XLXN_16" name="L" />
-            <blockpin signalname="D(0)" name="SLI" />
+            <blockpin signalname="D(7)" name="SLI" />
             <blockpin signalname="Q(7:0)" name="Q(7:0)" />
         </block>
         <block symbolname="buf" name="XLXI_5">
-            <blockpin signalname="Q(0)" name="I" />
+            <blockpin signalname="Q(7)" name="I" />
             <blockpin signalname="AOUT" name="O" />
         </block>
         <block symbolname="Or8Bus" name="TestActive">
@@ -150,10 +149,10 @@
             <blockpin signalname="ACTIVE" name="O" />
         </block>
         <block symbolname="vcc" name="XLXI_6">
-            <blockpin signalname="D(0)" name="P" />
+            <blockpin signalname="D(7)" name="P" />
         </block>
         <block symbolname="gnd" name="XLXI_7">
-            <blockpin signalname="D(7)" name="G" />
+            <blockpin signalname="D(0)" name="G" />
         </block>
         <block symbolname="cb4ce" name="XLXI_1">
             <blockpin signalname="CLK" name="C" />
@@ -178,7 +177,7 @@
         </block>
         <block symbolname="Buf6" name="DataBuffer">
             <blockpin signalname="DATA(5:0)" name="I(5:0)" />
-            <blockpin signalname="D(6:1)" name="O(5:0)" />
+            <blockpin signalname="D(1:6)" name="O(5:0)" />
         </block>
         <block symbolname="And8Bus" name="TestFinished">
             <blockpin signalname="Q(7:0)" name="I(7:0)" />
@@ -199,7 +198,7 @@
         </branch>
         <bustap x2="1808" y1="512" y2="512" x1="1712" />
         <instance x="1856" y="544" name="XLXI_5" orien="R0" />
-        <branch name="Q(0)">
+        <branch name="Q(7)">
             <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="1824" y="512" type="branch" />
             <wire x2="1824" y1="512" y2="512" x1="1808" />
             <wire x2="1856" y1="512" y2="512" x1="1824" />
@@ -224,7 +223,7 @@
         <bustap x2="928" y1="384" y2="384" x1="1024" />
         <bustap x2="928" y1="448" y2="448" x1="1024" />
         <bustap x2="928" y1="512" y2="512" x1="1024" />
-        <branch name="D(0)">
+        <branch name="D(7)">
             <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="912" y="384" type="branch" />
             <wire x2="848" y1="256" y2="304" x1="848" />
             <wire x2="1168" y1="304" y2="304" x1="848" />
@@ -233,7 +232,7 @@
             <wire x2="928" y1="384" y2="384" x1="912" />
         </branch>
         <instance x="784" y="256" name="XLXI_6" orien="R0" />
-        <branch name="D(7)">
+        <branch name="D(0)">
             <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="912" y="512" type="branch" />
             <wire x2="848" y1="512" y2="528" x1="848" />
             <wire x2="912" y1="512" y2="512" x1="848" />
@@ -292,7 +291,7 @@
         <instance x="560" y="480" name="DataBuffer" orien="R0">
             <attrtext style="fontsize:28;fontname:Arial" attrname="InstName" x="96" y="16" type="instance" />
         </instance>
-        <branch name="D(6:1)">
+        <branch name="D(1:6)">
             <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="912" y="448" type="branch" />
             <wire x2="912" y1="448" y2="448" x1="784" />
             <wire x2="928" y1="448" y2="448" x1="912" />
