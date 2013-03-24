@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <symbol version="7" name="StateDecoder">
     <symboltype>BLOCK</symboltype>
-    <timestamp>2013-3-24T15:28:41</timestamp>
-    <pin polarity="Input" x="0" y="-288" name="State(7:0)" />
+    <timestamp>2013-3-24T16:59:8</timestamp>
+    <pin polarity="Input" x="0" y="-288" name="State(6:0)" />
     <pin polarity="Output" x="384" y="-288" name="Idle" />
     <pin polarity="Output" x="384" y="-224" name="ChkStart" />
     <pin polarity="Output" x="384" y="-160" name="DoShift" />
@@ -11,7 +11,7 @@
     <graph>
         <rect width="256" x="64" y="-320" height="320" />
         <attrtext style="alignment:BCENTER;fontsize:56;fontname:Arial" attrname="SymbolName" x="192" y="-328" type="symbol" />
-        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-288" type="pin State(7:0)" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-288" type="pin State(6:0)" />
         <rect width="64" x="0" y="-300" height="24" />
         <line x2="0" y1="-288" y2="-288" x1="64" />
         <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="312" y="-288" type="pin Idle" />
