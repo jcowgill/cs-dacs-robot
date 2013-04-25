@@ -51,7 +51,7 @@ BEGIN
         CLR <= '0';
 
         -- Send the number 1
-        DATA <= "000001";
+        DATA <= "001010";
         SEND <= '1';
         WAIT FOR 1000ns;
         SEND <= '0';
