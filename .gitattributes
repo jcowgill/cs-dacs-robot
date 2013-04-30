@@ -1,3 +1,5 @@
+# Force LF in repository
+* text=auto
+
 # ISE Project files always use unix line endings (for some stupid reason)
-#
 *.xise  eol=lf
