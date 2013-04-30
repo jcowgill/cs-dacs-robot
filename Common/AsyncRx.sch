@@ -108,7 +108,7 @@
             <rect width="64" x="0" y="-236" height="24" />
             <rect width="256" x="64" y="-288" height="256" />
         </blockdef>
-        <blockdef name="StateDecoder">
+        <blockdef name="AsyncRxStateDecoder">
             <timestamp>2013-3-24T16:59:8</timestamp>
             <rect width="256" x="64" y="-320" height="320" />
             <rect width="64" x="0" y="-300" height="24" />
@@ -247,7 +247,7 @@
             <blockpin signalname="ChkStop" name="I1" />
             <blockpin signalname="XLXN_136" name="O" />
         </block>
-        <block symbolname="StateDecoder" name="Decoder">
+        <block symbolname="AsyncRxStateDecoder" name="Decoder">
             <blockpin signalname="S(6:0)" name="State(6:0)" />
             <blockpin signalname="Idle" name="Idle" />
             <blockpin signalname="ChkStart" name="ChkStart" />

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<symbol version="7" name="StateDecoder">
+<symbol version="7" name="AsyncRxStateDecoder">
     <symboltype>BLOCK</symboltype>
     <timestamp>2013-3-24T16:59:8</timestamp>
     <pin polarity="Input" x="0" y="-288" name="State(6:0)" />

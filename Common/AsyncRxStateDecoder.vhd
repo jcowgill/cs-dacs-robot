@@ -2,7 +2,7 @@ LIBRARY IEEE;
 USE IEEE.STD_LOGIC_1164.ALL;
 USE IEEE.NUMERIC_STD.ALL;
 
-ENTITY StateDecoder is
+ENTITY AsyncRxStateDecoder is
     PORT (
         State       : in  STD_LOGIC_VECTOR (6 downto 0);
         Idle        : out STD_LOGIC;    -- 00
@@ -13,7 +13,7 @@ ENTITY StateDecoder is
     );
 END StateDecoder;
 
-ARCHITECTURE Behavioral of StateDecoder is
+ARCHITECTURE Behavioral of AsyncRxStateDecoder is
 BEGIN
 
     -- Produce output signals
