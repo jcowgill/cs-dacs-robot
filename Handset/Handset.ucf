@@ -3,33 +3,33 @@ NET "CLK"       LOC = "P44";
 NET "CLR"       LOC = "P33";
 
 # BUFFERED INPUTS
-NET "WRX0"      LOC = "P39";
-NET "WRX1"      LOC = "P40";
-NET "WRX2"      LOC = "P41";
-NET "WRX3"      LOC = "P42";
+NET "RX"        LOC = "P39";
+#NET "WRX1"      LOC = "P40";
+#NET "WRX2"      LOC = "P41";
+#NET "WRX3"      LOC = "P42";
 
 # LED
-NET "L1"        LOC = "P18";
-NET "L2"        LOC = "P16";
-NET "L3"        LOC = "P14";
-NET "L4"        LOC = "P13";
-NET "L5"        LOC = "P12";
-NET "L6"        LOC = "P8";
-NET "L7"        LOC = "P7";
-NET "L8"        LOC = "P6";
+NET "LED(0)"    LOC = "P18";
+NET "LED(1)"    LOC = "P16";
+NET "LED(2)"    LOC = "P14";
+NET "LED(3)"    LOC = "P13";
+NET "LED(4)"    LOC = "P12";
+NET "LED(5)"    LOC = "P8";
+NET "LED(6)"    LOC = "P7";
+NET "LED(7)"    LOC = "P6";
 
 # BUTTON
-NET "B1"        LOC = "P19";
-NET "B2"        LOC = "P20";
-NET "B3"        LOC = "P21";
-NET "B4"        LOC = "P22";
-NET "B5"        LOC = "P23";
-NET "B6"        LOC = "P28";
-NET "B7"        LOC = "P27";
-NET "B8"        LOC = "P29";
+NET "BUT(0)"    LOC = "P19";
+NET "BUT(1)"    LOC = "P20";
+NET "BUT(2)"    LOC = "P21";
+NET "BUT(3)"    LOC = "P22";
+NET "BUT(4)"    LOC = "P23";
+NET "BUT(5)"    LOC = "P28";
+NET "BUT(6)"    LOC = "P27";
+NET "BUT(7)"    LOC = "P29";
 
 # BUFFERED OUTPUTS
-NET "WTX0"      LOC = "P1";
-NET "WTX1"      LOC = "P2";
-NET "WTX2"      LOC = "P3";
-NET "WTX3"      LOC = "P5";
+NET "TX"        LOC = "P1";
+#NET "WTX1"      LOC = "P2";
+#NET "WTX2"      LOC = "P3";
+#NET "WTX3"      LOC = "P5";
