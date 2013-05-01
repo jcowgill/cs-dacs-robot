@@ -9,7 +9,7 @@
         <signal name="FINISHED" />
         <signal name="Q(7:0)" />
         <signal name="Q(7)" />
-        <signal name="AOUT" />
+        <signal name="TX" />
         <signal name="ACTIVE" />
         <signal name="D(7:0)" />
         <signal name="D(7)" />
@@ -22,7 +22,7 @@
         <signal name="CLK" />
         <signal name="D(1:6)" />
         <signal name="DATA(5:0)" />
-        <port polarity="Output" name="AOUT" />
+        <port polarity="Output" name="TX" />
         <port polarity="Output" name="ACTIVE" />
         <port polarity="Input" name="SEND" />
         <port polarity="Input" name="CLR" />
@@ -142,7 +142,7 @@
         </block>
         <block symbolname="buf" name="XLXI_5">
             <blockpin signalname="Q(7)" name="I" />
-            <blockpin signalname="AOUT" name="O" />
+            <blockpin signalname="TX" name="O" />
         </block>
         <block symbolname="Or8Bus" name="TestActive">
             <blockpin signalname="Q(7:0)" name="I(7:0)" />
@@ -203,7 +203,7 @@
             <wire x2="1824" y1="512" y2="512" x1="1808" />
             <wire x2="1856" y1="512" y2="512" x1="1824" />
         </branch>
-        <branch name="AOUT">
+        <branch name="TX">
             <wire x2="2192" y1="512" y2="512" x1="2080" />
         </branch>
         <instance x="1776" y="704" name="TestActive" orien="R0">
@@ -284,7 +284,7 @@
             <wire x2="1168" y1="752" y2="1120" x1="1168" />
         </branch>
         <iomarker fontsize="28" x="2192" y="672" name="ACTIVE" orien="R0" />
-        <iomarker fontsize="28" x="2192" y="512" name="AOUT" orien="R0" />
+        <iomarker fontsize="28" x="2192" y="512" name="TX" orien="R0" />
         <iomarker fontsize="28" x="432" y="672" name="SEND" orien="R180" />
         <iomarker fontsize="28" x="432" y="816" name="CLR" orien="R180" />
         <iomarker fontsize="28" x="432" y="1120" name="CLK" orien="R180" />
