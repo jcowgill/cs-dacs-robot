@@ -11,7 +11,7 @@ ENTITY AsyncRxStateDecoder is
         ChkStop     : out STD_LOGIC;    -- 77
         CountReset  : out STD_LOGIC     -- 78
     );
-END StateDecoder;
+END AsyncRxStateDecoder;
 
 ARCHITECTURE Behavioral of AsyncRxStateDecoder is
 BEGIN
