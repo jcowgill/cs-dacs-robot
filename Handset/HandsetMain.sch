@@ -11,11 +11,11 @@
         <signal name="TX" />
         <signal name="XLXN_96(5:0)" />
         <signal name="XLXN_97" />
-        <signal name="XLXN_98" />
+        <signal name="CLK" />
         <signal name="XLXN_100" />
         <port polarity="Input" name="BUT(7:0)" />
         <port polarity="Output" name="TX" />
-        <port polarity="Input" name="XLXN_98" />
+        <port polarity="Input" name="CLK" />
         <blockdef name="AsyncTx">
             <timestamp>2013-5-1T0:6:26</timestamp>
             <rect width="256" x="64" y="-256" height="256" />
@@ -65,7 +65,7 @@
             <line x2="384" y1="-160" y2="-160" x1="320" />
         </blockdef>
         <block symbolname="fd8" name="XLXI_24">
-            <blockpin signalname="XLXN_98" name="C" />
+            <blockpin signalname="CLK" name="C" />
             <blockpin signalname="BUT(7:0)" name="D(7:0)" />
             <blockpin signalname="XLXN_68(7:0)" name="Q(7:0)" />
         </block>
@@ -75,14 +75,14 @@
         </block>
         <block symbolname="AsyncTx" name="AsyncTx0">
             <blockpin name="ACTIVE" />
-            <blockpin signalname="XLXN_98" name="CLK" />
+            <blockpin signalname="CLK" name="CLK" />
             <blockpin signalname="XLXN_100" name="CLR" />
             <blockpin signalname="XLXN_96(5:0)" name="DATA(5:0)" />
             <blockpin signalname="XLXN_97" name="SEND" />
             <blockpin signalname="TX" name="TX" />
         </block>
         <block symbolname="ButtonPulseGenerator" name="ButtonPulseGenerator0">
-            <blockpin signalname="XLXN_98" name="CLK" />
+            <blockpin signalname="CLK" name="CLK" />
             <blockpin signalname="XLXN_100" name="CLR" />
             <blockpin signalname="XLXN_96(5:0)" name="DATA(5:0)" />
             <blockpin signalname="XLXN_97" name="SEND" />
@@ -117,7 +117,7 @@
             <wire x2="1936" y1="336" y2="400" x1="1936" />
             <wire x2="1984" y1="336" y2="336" x1="1936" />
         </branch>
-        <branch name="XLXN_98">
+        <branch name="CLK">
             <wire x2="432" y1="400" y2="400" x1="368" />
             <wire x2="432" y1="400" y2="608" x1="432" />
             <wire x2="1296" y1="608" y2="608" x1="432" />
@@ -136,7 +136,7 @@
         </branch>
         <instance x="1296" y="800" name="XLXI_26" orien="R0" />
         <iomarker fontsize="28" x="384" y="272" name="BUT(7:0)" orien="R180" />
-        <iomarker fontsize="28" x="368" y="400" name="XLXN_98" orien="R180" />
+        <iomarker fontsize="28" x="368" y="400" name="CLK" orien="R180" />
         <iomarker fontsize="28" x="2416" y="272" name="TX" orien="R0" />
         <instance x="928" y="304" name="ButtonEncoder0" orien="R0">
         </instance>
