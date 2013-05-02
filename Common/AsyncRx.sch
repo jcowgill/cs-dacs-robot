@@ -6,54 +6,7 @@
         <trait edittrait="all:0" />
     </attr>
     <netlist>
-        <signal name="XLXN_2(6:0)" />
-        <signal name="XLXN_3(6:0)" />
-        <signal name="XLXN_4(6:0)" />
-        <signal name="XLXN_5(6:0)" />
-        <signal name="XLXN_6(6:0)" />
-        <signal name="XLXN_7(6:0)" />
-        <signal name="XLXN_8(6:0)" />
-        <signal name="XLXN_9(6:0)" />
-        <signal name="XLXN_10(6:0)" />
-        <signal name="XLXN_11(6:0)" />
-        <signal name="XLXN_13(6:0)" />
-        <signal name="XLXN_14(6:0)" />
-        <signal name="XLXN_35" />
-        <signal name="XLXN_38" />
-        <signal name="XLXN_39" />
-        <signal name="XLXN_40" />
-        <signal name="XLXN_41" />
-        <signal name="XLXN_42" />
-        <signal name="XLXN_46" />
-        <signal name="XLXN_54" />
-        <signal name="XLXN_57" />
-        <signal name="XLXN_60" />
-        <signal name="XLXN_61" />
-        <signal name="XLXN_64" />
-        <signal name="XLXN_68" />
-        <signal name="XLXN_72" />
         <signal name="ChkStart" />
-        <signal name="XLXN_80" />
-        <signal name="XLXN_89" />
-        <signal name="XLXN_90" />
-        <signal name="XLXN_93" />
-        <signal name="XLXN_97" />
-        <signal name="XLXN_103" />
-        <signal name="XLXN_104" />
-        <signal name="XLXN_106" />
-        <signal name="XLXN_108" />
-        <signal name="XLXN_111" />
-        <signal name="XLXN_114" />
-        <signal name="XLXN_115" />
-        <signal name="XLXN_120(5:0)" />
-        <signal name="XLXN_122" />
-        <signal name="XLXN_132" />
-        <signal name="XLXN_135" />
-        <signal name="XLXN_138" />
-        <signal name="XLXN_140" />
-        <signal name="XLXN_141" />
-        <signal name="XLXN_190" />
-        <signal name="XLXN_222" />
         <signal name="S(7:0)" />
         <signal name="S(6:0)" />
         <signal name="Q(5:0)" />
@@ -64,16 +17,14 @@
         <signal name="XLXN_94" />
         <signal name="CountReset" />
         <signal name="DoShift" />
-        <signal name="XLXN_254" />
         <signal name="RX" />
-        <signal name="SR_Q(5:0)" />
+        <signal name="SR_Q(0:5)" />
         <signal name="SR_Q(7:0)" />
         <signal name="XLXN_136" />
         <signal name="CLK" />
         <signal name="CLR" />
         <signal name="ChkStop" />
         <signal name="UPDATE" />
-        <port polarity="Input" name="XLXN_89" />
         <port polarity="Output" name="Q(5:0)" />
         <port polarity="Input" name="RX" />
         <port polarity="Input" name="CLK" />
@@ -233,7 +184,7 @@
             <blockpin signalname="CLK" name="C" />
             <blockpin signalname="XLXN_136" name="CE" />
             <blockpin signalname="CLR" name="CLR" />
-            <blockpin signalname="SR_Q(5:0)" name="D(5:0)" />
+            <blockpin signalname="SR_Q(0:5)" name="D(5:0)" />
             <blockpin signalname="Q(5:0)" name="Q(5:0)" />
         </block>
         <block symbolname="fdc" name="XLXI_46">
@@ -327,7 +278,7 @@
         </branch>
         <instance x="1808" y="1520" name="DataReg" orien="R0">
         </instance>
-        <branch name="SR_Q(5:0)">
+        <branch name="SR_Q(0:5)">
             <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="1488" y="1296" type="branch" />
             <wire x2="1488" y1="1296" y2="1296" x1="1440" />
             <wire x2="1808" y1="1296" y2="1296" x1="1488" />
@@ -424,5 +375,6 @@
         <iomarker fontsize="28" x="256" y="1328" name="CLK" orien="R180" />
         <iomarker fontsize="28" x="256" y="1392" name="CLR" orien="R180" />
         <iomarker fontsize="28" x="2384" y="880" name="UPDATE" orien="R0" />
+        <text style="fontsize:24;fontname:Arial" x="1180" y="1340">Note the bits are REVERSED here</text>
     </sheet>
 </drawing>
