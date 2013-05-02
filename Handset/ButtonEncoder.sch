@@ -30,7 +30,9 @@
         <signal name="BUT(3)" />
         <signal name="BUT(7:0)" />
         <signal name="DATA(5:0)" />
-        <signal name="XLXN_38" />
+        <signal name="DATA(3)" />
+        <signal name="DATA(4)" />
+        <signal name="DATA(5)" />
         <port polarity="Input" name="BUT(7:0)" />
         <port polarity="Output" name="DATA(5:0)" />
         <blockdef name="nor2">
@@ -105,6 +107,15 @@
             <line x2="48" y1="-80" y2="-80" x1="112" />
             <arc ex="112" ey="-176" sx="192" sy="-128" r="88" cx="116" cy="-88" />
             <line x2="48" y1="-176" y2="-176" x1="112" />
+        </blockdef>
+        <blockdef name="gnd">
+            <timestamp>2000-1-1T10:10:10</timestamp>
+            <line x2="64" y1="-128" y2="-96" x1="64" />
+            <line x2="64" y1="-64" y2="-80" x1="64" />
+            <line x2="40" y1="-64" y2="-64" x1="88" />
+            <line x2="60" y1="-32" y2="-32" x1="68" />
+            <line x2="52" y1="-48" y2="-48" x1="76" />
+            <line x2="64" y1="-64" y2="-96" x1="64" />
         </blockdef>
         <block symbolname="nor2" name="XLXI_1">
             <blockpin signalname="BUT(0)" name="I0" />
@@ -183,6 +194,15 @@
             <blockpin signalname="XLXN_36" name="I1" />
             <blockpin signalname="XLXN_34" name="I2" />
             <blockpin signalname="DATA(0)" name="O" />
+        </block>
+        <block symbolname="gnd" name="XLXI_22">
+            <blockpin signalname="DATA(3)" name="G" />
+        </block>
+        <block symbolname="gnd" name="XLXI_23">
+            <blockpin signalname="DATA(4)" name="G" />
+        </block>
+        <block symbolname="gnd" name="XLXI_24">
+            <blockpin signalname="DATA(5)" name="G" />
         </block>
     </netlist>
     <sheet sheetnum="1" width="3520" height="2720">
@@ -308,9 +328,7 @@
         </branch>
         <branch name="DATA(1)">
             <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="2944" y="1184" type="branch" />
-            <wire x2="2512" y1="1184" y2="1184" x1="2496" />
-            <wire x2="2928" y1="1184" y2="1184" x1="2512" />
-            <wire x2="2944" y1="1184" y2="1184" x1="2928" />
+            <wire x2="2944" y1="1184" y2="1184" x1="2496" />
             <wire x2="3088" y1="1184" y2="1184" x1="2944" />
         </branch>
         <instance x="1632" y="912" name="XLXI_13" orien="R0" />
@@ -357,16 +375,12 @@
         <instance x="2720" y="688" name="XLXI_20" orien="R0" />
         <branch name="DATA(0)">
             <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="3024" y="560" type="branch" />
-            <wire x2="3008" y1="560" y2="560" x1="2976" />
-            <wire x2="3024" y1="560" y2="560" x1="3008" />
+            <wire x2="3024" y1="560" y2="560" x1="2976" />
             <wire x2="3088" y1="560" y2="560" x1="3024" />
         </branch>
         <branch name="BUT(3)">
             <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="384" y="1216" type="branch" />
-            <wire x2="288" y1="1216" y2="1232" x1="288" />
-            <wire x2="336" y1="1232" y2="1232" x1="288" />
-            <wire x2="336" y1="1216" y2="1232" x1="336" />
-            <wire x2="384" y1="1216" y2="1216" x1="336" />
+            <wire x2="384" y1="1216" y2="1216" x1="288" />
             <wire x2="560" y1="1216" y2="1216" x1="384" />
             <wire x2="864" y1="1216" y2="1216" x1="560" />
             <wire x2="944" y1="1216" y2="1216" x1="864" />
@@ -377,8 +391,7 @@
         </branch>
         <branch name="BUT(7:0)">
             <wire x2="192" y1="160" y2="160" x1="176" />
-            <wire x2="192" y1="160" y2="464" x1="192" />
-            <wire x2="192" y1="464" y2="480" x1="192" />
+            <wire x2="192" y1="160" y2="480" x1="192" />
             <wire x2="192" y1="480" y2="816" x1="192" />
             <wire x2="192" y1="816" y2="880" x1="192" />
             <wire x2="192" y1="880" y2="1216" x1="192" />
@@ -396,16 +409,39 @@
         <bustap x2="288" y1="1744" y2="1744" x1="192" />
         <branch name="DATA(5:0)">
             <wire x2="3216" y1="176" y2="176" x1="3184" />
-            <wire x2="3184" y1="176" y2="544" x1="3184" />
-            <wire x2="3184" y1="544" y2="560" x1="3184" />
+            <wire x2="3184" y1="176" y2="560" x1="3184" />
             <wire x2="3184" y1="560" y2="1184" x1="3184" />
             <wire x2="3184" y1="1184" y2="1536" x1="3184" />
-            <wire x2="3184" y1="1536" y2="2064" x1="3184" />
+            <wire x2="3184" y1="1536" y2="1680" x1="3184" />
+            <wire x2="3184" y1="1680" y2="1792" x1="3184" />
+            <wire x2="3184" y1="1792" y2="1904" x1="3184" />
+            <wire x2="3184" y1="1904" y2="2064" x1="3184" />
         </branch>
         <bustap x2="3088" y1="560" y2="560" x1="3184" />
         <bustap x2="3088" y1="1184" y2="1184" x1="3184" />
         <bustap x2="3088" y1="1536" y2="1536" x1="3184" />
         <iomarker fontsize="28" x="3216" y="176" name="DATA(5:0)" orien="R0" />
         <iomarker fontsize="28" x="176" y="160" name="BUT(7:0)" orien="R180" />
+        <bustap x2="3088" y1="1680" y2="1680" x1="3184" />
+        <bustap x2="3088" y1="1792" y2="1792" x1="3184" />
+        <bustap x2="3088" y1="1904" y2="1904" x1="3184" />
+        <instance x="2784" y="1808" name="XLXI_22" orien="R0" />
+        <instance x="2864" y="1920" name="XLXI_23" orien="R0" />
+        <instance x="2944" y="2032" name="XLXI_24" orien="R0" />
+        <branch name="DATA(3)">
+            <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="3024" y="1680" type="branch" />
+            <wire x2="3024" y1="1680" y2="1680" x1="2848" />
+            <wire x2="3088" y1="1680" y2="1680" x1="3024" />
+        </branch>
+        <branch name="DATA(4)">
+            <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="3024" y="1792" type="branch" />
+            <wire x2="3024" y1="1792" y2="1792" x1="2928" />
+            <wire x2="3088" y1="1792" y2="1792" x1="3024" />
+        </branch>
+        <branch name="DATA(5)">
+            <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="3056" y="1904" type="branch" />
+            <wire x2="3056" y1="1904" y2="1904" x1="3008" />
+            <wire x2="3088" y1="1904" y2="1904" x1="3056" />
+        </branch>
     </sheet>
 </drawing>
