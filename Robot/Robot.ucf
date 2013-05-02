@@ -1,45 +1,47 @@
 # CLOCK / RESET
-NET "CLK"       LOC = "P44";
-NET "CLR"       LOC = "P33";
+NET "CLK"      LOC = "P44"; 
+NET "CLR"      LOC = "P33"; 
 
 # BUFFERED INPUTS
-NET "WCMD0"     LOC = "P39";
-NET "WCMD1"     LOC = "P40";
-NET "WCMD2"     LOC = "P41";
-NET "WCMD3"     LOC = "P42";
+NET "RX"    	LOC = "P39"; 
+#NET "WCMD1"    LOC = "P40"; 
+#NET "WCMD2"    LOC = "P41"; 
+#NET "WCMD3"    LOC = "P42"; 
 
 # GENERAL PURPOSE IO
-#NET "EXT0"     LOC = "P19";
-#NET "EXT1"     LOC = "P20";
-#NET "EXT2"     LOC = "P28";
-#NET "EXT3"     LOC = "P29";
-NET "EXT4"      LOC = "P43";
-NET "EXT5"      LOC = "P3";
-NET "EXT6"      LOC = "P5";
-NET "EXT7"      LOC = "P38";
-NET "EXT8"      LOC = "P37";
-NET "EXT9"      LOC = "P36";
+NET "BUMPER(0)"	LOC = "P43"; 
+NET "BUMPER(1)"	LOC = "P3"; 
+NET "BUMPER(2)"	LOC = "P29"; 
+NET "BUMPER(3)"	LOC = "P28"; 
+NET "BUMPER(4)"	LOC = "P20"; 
+NET "BUMPER(5)"	LOC = "P19"; 
 
 # LED
-NET "L1"        LOC = "P18";
-NET "L2"        LOC = "P16";
-NET "L3"        LOC = "P14";
-NET "L4"        LOC = "P13";
-NET "L5"        LOC = "P12";
-NET "L6"        LOC = "P8";
-NET "L7"        LOC = "P7";
-NET "L8"        LOC = "P6";
+#NET "L1"       LOC = "P18"; 
+#NET "L2"       LOC = "P16"; 
+#NET "L3"       LOC = "P14"; 
+#NET "L4"       LOC = "P13";
+#NET "L5"       LOC = "P12"; 
+#NET "L6"       LOC = "P8"; 
+#NET "L7"       LOC = "P7"; 
+#NET "L8"       LOC = "P6";
 
 # BUTTON
-NET "B1"        LOC = "P19";
-NET "B2"        LOC = "P20";
-NET "B3"        LOC = "P21";
-NET "B4"        LOC = "P22";
-NET "B5"        LOC = "P23";
-NET "B6"        LOC = "P28";
-NET "B7"        LOC = "P27";
-NET "B8"        LOC = "P29";
+#NET "B1"       LOC = "P19"; 
+#NET "B2"       LOC = "P20"; 
+#NET "B3"       LOC = "P21"; 
+#NET "B4"       LOC = "P22";
+#NET "B5"       LOC = "P23"; 
+#NET "B6"       LOC = "P28"; 
+#NET "B7"       LOC = "P27"; 
+#NET "B8"       LOC = "P29";
 
 # BUFFERED OUTPUTS
-NET "WTX0"      LOC = "P1";
-NET "WTX1"      LOC = "P2";
+NET "TX"       LOC = "P1"; 
+#NET "WTX1"     LOC = "P2"; 
+
+# MOTOR IO
+NET "LM0"     LOC = "P30"; 
+NET "LM1"     LOC = "P31"; 
+NET "RM0"     LOC = "P32"; 
+NET "RM1"     LOC = "P34"; 
