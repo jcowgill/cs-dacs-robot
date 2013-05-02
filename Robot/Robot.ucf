@@ -1,6 +1,6 @@
 # CLOCK / RESET
 NET "CLK"      LOC = "P44"; 
-NET "CLR"      LOC = "P33"; 
+#NET "CLR"      LOC = "P33"; 
 
 # BUFFERED INPUTS
 NET "RX"    	LOC = "P39"; 
@@ -9,12 +9,12 @@ NET "RX"    	LOC = "P39";
 #NET "WCMD3"    LOC = "P42"; 
 
 # GENERAL PURPOSE IO
-NET "BUMPER(0)"	LOC = "P43"; 
-NET "BUMPER(1)"	LOC = "P3"; 
-NET "BUMPER(2)"	LOC = "P29"; 
-NET "BUMPER(3)"	LOC = "P28"; 
-NET "BUMPER(4)"	LOC = "P20"; 
-NET "BUMPER(5)"	LOC = "P19"; 
+#NET "BUMPER(0)"    LOC = "P43";
+#NET "BUMPER(1)"    LOC = "P3";
+#NET "BUMPER(2)"    LOC = "P29";
+#NET "BUMPER(3)"    LOC = "P28";
+#NET "BUMPER(4)"    LOC = "P20";
+#NET "BUMPER(5)"    LOC = "P19";
 
 # LED
 #NET "L1"       LOC = "P18"; 
@@ -37,7 +37,7 @@ NET "BUMPER(5)"	LOC = "P19";
 #NET "B8"       LOC = "P29";
 
 # BUFFERED OUTPUTS
-NET "TX"       LOC = "P1"; 
+#NET "TX"       LOC = "P1"; 
 #NET "WTX1"     LOC = "P2"; 
 
 # MOTOR IO
