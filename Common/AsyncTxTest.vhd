@@ -8,7 +8,7 @@ END AsyncTxTest;
 ARCHITECTURE behavioral OF AsyncTxTest IS
 
     COMPONENT AsyncTx
-    PORT ( AOUT   :  OUT STD_LOGIC;
+    PORT ( TX     :  OUT STD_LOGIC;
            ACTIVE :  OUT STD_LOGIC;
            SEND   :  IN  STD_LOGIC;
            CLR    :  IN  STD_LOGIC;
@@ -16,7 +16,7 @@ ARCHITECTURE behavioral OF AsyncTxTest IS
            DATA   :  IN  STD_LOGIC_VECTOR (5 DOWNTO 0));
     END COMPONENT;
 
-    SIGNAL AOUT   :  STD_LOGIC;
+    SIGNAL TX     :  STD_LOGIC;
     SIGNAL ACTIVE :  STD_LOGIC;
     SIGNAL SEND   :  STD_LOGIC;
     SIGNAL CLR    :  STD_LOGIC;
@@ -26,7 +26,7 @@ ARCHITECTURE behavioral OF AsyncTxTest IS
 BEGIN
 
     UUT: AsyncTx PORT MAP(
-        AOUT   => AOUT,
+        TX     => TX,
         ACTIVE => ACTIVE,
         SEND   => SEND,
         CLR    => CLR,
