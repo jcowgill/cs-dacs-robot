@@ -2,12 +2,12 @@ LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
 USE ieee.numeric_std.ALL;
 
-ENTITY ButtonPulseGeneratorTest IS
-END ButtonPulseGeneratorTest;
+ENTITY DataChangeDetectorTest IS
+END DataChangeDetectorTest;
 
-ARCHITECTURE behavioral OF ButtonPulseGeneratorTest IS
+ARCHITECTURE behavioral OF DataChangeDetectorTest IS
 
-    COMPONENT ButtonPulseGenerator
+    COMPONENT DataChangeDetector
     PORT ( SEND   :  OUT STD_LOGIC;
            CLR    :  IN  STD_LOGIC;
            CLK    :  IN  STD_LOGIC;
@@ -21,7 +21,7 @@ ARCHITECTURE behavioral OF ButtonPulseGeneratorTest IS
 
 BEGIN
 
-    UUT: ButtonPulseGenerator PORT MAP(
+    UUT: DataChangeDetector PORT MAP(
         SEND   => SEND,
         CLR    => CLR,
         CLK    => CLK,

@@ -55,8 +55,8 @@
             <line x2="52" y1="-48" y2="-48" x1="76" />
             <line x2="64" y1="-64" y2="-96" x1="64" />
         </blockdef>
-        <blockdef name="ButtonPulseGenerator">
-            <timestamp>2013-5-2T15:1:12</timestamp>
+        <blockdef name="DataChangeDetector">
+            <timestamp>2013-5-9T13:35:59</timestamp>
             <rect width="256" x="64" y="-192" height="192" />
             <line x2="0" y1="-96" y2="-96" x1="64" />
             <line x2="0" y1="-32" y2="-32" x1="64" />
@@ -81,14 +81,14 @@
             <blockpin signalname="XLXN_97" name="SEND" />
             <blockpin signalname="TX" name="TX" />
         </block>
-        <block symbolname="ButtonPulseGenerator" name="ButtonPulseGenerator0">
+        <block symbolname="gnd" name="XLXI_26">
+            <blockpin signalname="XLXN_100" name="G" />
+        </block>
+        <block symbolname="DataChangeDetector" name="ButtonChangeDetector">
             <blockpin signalname="CLK" name="CLK" />
             <blockpin signalname="XLXN_100" name="CLR" />
             <blockpin signalname="XLXN_96(5:0)" name="DATA(5:0)" />
             <blockpin signalname="XLXN_97" name="SEND" />
-        </block>
-        <block symbolname="gnd" name="XLXI_26">
-            <blockpin signalname="XLXN_100" name="G" />
         </block>
     </netlist>
     <sheet sheetnum="1" width="2720" height="1760">
@@ -103,8 +103,6 @@
             <wire x2="2416" y1="272" y2="272" x1="2368" />
         </branch>
         <instance x="1984" y="496" name="AsyncTx0" orien="R0">
-        </instance>
-        <instance x="1456" y="560" name="ButtonPulseGenerator0" orien="R0">
         </instance>
         <branch name="XLXN_96(5:0)">
             <wire x2="1344" y1="272" y2="272" x1="1312" />
@@ -139,6 +137,8 @@
         <iomarker fontsize="28" x="368" y="400" name="CLK" orien="R180" />
         <iomarker fontsize="28" x="2416" y="272" name="TX" orien="R0" />
         <instance x="928" y="304" name="ButtonEncoder0" orien="R0">
+        </instance>
+        <instance x="1456" y="560" name="ButtonChangeDetector" orien="R0">
         </instance>
     </sheet>
 </drawing>
