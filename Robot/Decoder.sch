@@ -7,8 +7,7 @@
     </attr>
     <netlist>
         <signal name="I(5:0)" />
-        <signal name="BR1">
-        </signal>
+        <signal name="BR1" />
         <signal name="I(0)" />
         <signal name="I(2)" />
         <signal name="I(1)" />
@@ -16,30 +15,6 @@
         <signal name="XLXN_163" />
         <signal name="XLXN_164" />
         <signal name="LR" />
-        <signal name="XLXN_134" />
-        <signal name="XLXN_222" />
-        <signal name="XLXN_223" />
-        <signal name="XLXN_224" />
-        <signal name="XLXN_225" />
-        <signal name="XLXN_229" />
-        <signal name="XLXN_230" />
-        <signal name="XLXN_231" />
-        <signal name="XLXN_232" />
-        <signal name="XLXN_233" />
-        <signal name="XLXN_234" />
-        <signal name="XLXN_243" />
-        <signal name="XLXN_244" />
-        <signal name="XLXN_245" />
-        <signal name="XLXN_246" />
-        <signal name="XLXN_247" />
-        <signal name="XLXN_248" />
-        <signal name="XLXN_249" />
-        <signal name="XLXN_250" />
-        <signal name="XLXN_251" />
-        <signal name="XLXN_253" />
-        <signal name="XLXN_254" />
-        <signal name="XLXN_255" />
-        <signal name="XLXN_257" />
         <signal name="XLXN_64" />
         <signal name="XLXN_63" />
         <signal name="XLXN_62" />
@@ -47,40 +22,18 @@
         <signal name="XLXN_39" />
         <signal name="XLXN_42" />
         <signal name="RR" />
-        <signal name="XLXN_266" />
-        <signal name="XLXN_267" />
-        <signal name="XLXN_268" />
-        <signal name="XLXN_269" />
-        <signal name="XLXN_270" />
-        <signal name="XLXN_271" />
-        <signal name="XLXN_272" />
-        <signal name="XLXN_273" />
-        <signal name="XLXN_274" />
-        <signal name="XLXN_276" />
-        <signal name="XLXN_277" />
-        <signal name="XLXN_278" />
-        <signal name="XLXN_280" />
         <signal name="XLXN_286" />
         <signal name="LF" />
-        <signal name="XLXN_290" />
-        <signal name="CLK" />
-        <signal name="XLXN_292" />
-        <signal name="XLXN_293" />
+        <signal name="SCLK" />
         <signal name="XLXN_295" />
-        <signal name="XLXN_297" />
-        <signal name="XLXN_298" />
-        <signal name="XLXN_299" />
         <signal name="RF" />
-        <signal name="XLXN_302" />
-        <signal name="XLXN_303" />
-        <signal name="XLXN_304" />
         <signal name="XLXN_306" />
         <signal name="XLXN_307" />
         <port polarity="Input" name="I(5:0)" />
         <port polarity="Output" name="LR" />
         <port polarity="Output" name="RR" />
         <port polarity="Output" name="LF" />
-        <port polarity="Input" name="CLK" />
+        <port polarity="Input" name="SCLK" />
         <port polarity="Output" name="RF" />
         <blockdef name="inv">
             <timestamp>2000-1-1T10:10:10</timestamp>
@@ -226,7 +179,7 @@
             <blockpin signalname="XLXN_42" name="O" />
         </block>
         <block symbolname="and4" name="XLXI_129">
-            <blockpin signalname="CLK" name="I0" />
+            <blockpin signalname="SCLK" name="I0" />
             <blockpin signalname="BR1" name="I1" />
             <blockpin signalname="I(1)" name="I2" />
             <blockpin signalname="XLXN_295" name="I3" />
@@ -236,7 +189,7 @@
             <blockpin signalname="I(0)" name="I0" />
             <blockpin signalname="I(1)" name="I1" />
             <blockpin signalname="XLXN_295" name="I2" />
-            <blockpin signalname="CLK" name="I3" />
+            <blockpin signalname="SCLK" name="I3" />
             <blockpin signalname="XLXN_306" name="O" />
         </block>
         <block symbolname="or2" name="XLXI_133">
@@ -400,13 +353,13 @@
             <wire x2="2448" y1="1936" y2="1936" x1="2304" />
         </branch>
         <iomarker fontsize="28" x="2384" y="1472" name="RR" orien="R0" />
-        <branch name="CLK">
+        <branch name="SCLK">
             <wire x2="1376" y1="1072" y2="1072" x1="192" />
             <wire x2="1424" y1="1072" y2="1072" x1="1376" />
             <wire x2="1424" y1="1024" y2="1024" x1="1376" />
             <wire x2="1376" y1="1024" y2="1072" x1="1376" />
         </branch>
-        <iomarker fontsize="28" x="192" y="1072" name="CLK" orien="R180" />
+        <iomarker fontsize="28" x="192" y="1072" name="SCLK" orien="R180" />
         <branch name="XLXN_295">
             <wire x2="992" y1="288" y2="288" x1="928" />
             <wire x2="1008" y1="288" y2="288" x1="992" />
