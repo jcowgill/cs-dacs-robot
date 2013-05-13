@@ -34,6 +34,7 @@
         <signal name="D(3)" />
         <signal name="D(4)" />
         <signal name="D(5)" />
+        <signal name="XLXN_27" />
         <port polarity="Input" name="RX" />
         <port polarity="Output" name="RM0" />
         <port polarity="Output" name="RM1" />
@@ -185,11 +186,11 @@
             <blockpin signalname="LM1" name="LR" />
             <blockpin signalname="RM0" name="RF" />
             <blockpin signalname="RM1" name="RR" />
-            <blockpin signalname="XLXN_21" name="SCLK" />
+            <blockpin signalname="XLXN_27" name="SCLK" />
         </block>
         <block symbolname="ClockDiv64" name="ClockDivider">
             <blockpin signalname="CLK" name="CLK" />
-            <blockpin signalname="XLXN_21" name="DIV64" />
+            <blockpin name="DIV64" />
         </block>
         <block symbolname="DataChangeDetector" name="BumperChangeDetector">
             <blockpin signalname="CLK" name="CLK" />
@@ -236,6 +237,10 @@
         <block symbolname="vcc" name="XLXI_12">
             <blockpin signalname="XLXN_25" name="P" />
         </block>
+        <block symbolname="ClockDiv64" name="XLXI_27">
+            <blockpin signalname="CLK" name="CLK" />
+            <blockpin signalname="XLXN_27" name="DIV64" />
+        </block>
     </netlist>
     <sheet sheetnum="1" width="2720" height="1760">
         <instance x="944" y="528" name="AsyncRx0" orien="R0">
@@ -271,17 +276,12 @@
         <iomarker fontsize="28" x="1904" y="432" name="RM1" orien="R0" />
         <iomarker fontsize="28" x="1904" y="496" name="LM0" orien="R0" />
         <iomarker fontsize="28" x="1904" y="560" name="LM1" orien="R0" />
-        <instance x="880" y="768" name="XLXI_6" orien="R0" />
         <branch name="CLK">
             <wire x2="416" y1="496" y2="496" x1="240" />
         </branch>
         <branch name="CLK">
             <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="896" y="432" type="branch" />
             <wire x2="944" y1="432" y2="432" x1="896" />
-        </branch>
-        <branch name="CLK">
-            <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="1440" y="432" type="branch" />
-            <wire x2="1472" y1="432" y2="432" x1="1440" />
         </branch>
         <instance x="1472" y="592" name="MotorDecoder" orien="R0">
             <attrtext style="fontsize:28;fontname:Arial" attrname="InstName" x="128" y="32" type="instance" />
@@ -407,5 +407,17 @@
         </branch>
         <iomarker fontsize="28" x="256" y="1072" name="BUMPER(5:0)" orien="R180" />
         <iomarker fontsize="28" x="2576" y="1008" name="TX" orien="R0" />
+        <instance x="880" y="656" name="XLXI_6" orien="R0" />
+        <instance x="1040" y="784" name="XLXI_27" orien="R0">
+        </instance>
+        <branch name="XLXN_27">
+            <wire x2="1440" y1="752" y2="752" x1="1424" />
+            <wire x2="1440" y1="432" y2="752" x1="1440" />
+            <wire x2="1472" y1="432" y2="432" x1="1440" />
+        </branch>
+        <branch name="CLK">
+            <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="1024" y="752" type="branch" />
+            <wire x2="1040" y1="752" y2="752" x1="1024" />
+        </branch>
     </sheet>
 </drawing>
