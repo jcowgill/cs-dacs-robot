@@ -71,15 +71,21 @@
             <line x2="64" y1="-64" y2="-96" x1="64" />
         </blockdef>
         <blockdef name="Decoder">
-            <timestamp>2013-5-9T13:57:40</timestamp>
+            <timestamp>2013-5-13T11:56:46</timestamp>
             <rect width="256" x="64" y="-256" height="256" />
-            <line x2="0" y1="-160" y2="-160" x1="64" />
             <line x2="0" y1="-224" y2="-224" x1="64" />
             <rect width="64" x="0" y="-236" height="24" />
             <line x2="384" y1="-96" y2="-96" x1="320" />
             <line x2="384" y1="-32" y2="-32" x1="320" />
             <line x2="384" y1="-224" y2="-224" x1="320" />
             <line x2="384" y1="-160" y2="-160" x1="320" />
+            <line x2="0" y1="-160" y2="-160" x1="64" />
+        </blockdef>
+        <blockdef name="ClockDiv64">
+            <timestamp>2013-5-13T11:57:9</timestamp>
+            <rect width="256" x="64" y="-64" height="64" />
+            <line x2="0" y1="-32" y2="-32" x1="64" />
+            <line x2="384" y1="-32" y2="-32" x1="320" />
         </blockdef>
         <blockdef name="DataChangeDetector">
             <timestamp>2013-5-9T14:10:11</timestamp>
@@ -174,12 +180,16 @@
             <blockpin signalname="XLXN_2" name="G" />
         </block>
         <block symbolname="Decoder" name="MotorDecoder">
-            <blockpin signalname="CLK" name="CLK" />
             <blockpin signalname="XLXN_7(5:0)" name="I(5:0)" />
             <blockpin signalname="LM0" name="LF" />
             <blockpin signalname="LM1" name="LR" />
             <blockpin signalname="RM0" name="RF" />
             <blockpin signalname="RM1" name="RR" />
+            <blockpin signalname="XLXN_21" name="SCLK" />
+        </block>
+        <block symbolname="ClockDiv64" name="ClockDivider">
+            <blockpin signalname="CLK" name="CLK" />
+            <blockpin signalname="XLXN_21" name="DIV64" />
         </block>
         <block symbolname="DataChangeDetector" name="BumperChangeDetector">
             <blockpin signalname="CLK" name="CLK" />
@@ -235,7 +245,7 @@
             <wire x2="944" y1="368" y2="368" x1="800" />
         </branch>
         <branch name="XLXN_2">
-            <wire x2="944" y1="496" y2="640" x1="944" />
+            <wire x2="944" y1="496" y2="528" x1="944" />
         </branch>
         <branch name="RX">
             <wire x2="416" y1="368" y2="368" x1="240" />
