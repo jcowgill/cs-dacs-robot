@@ -15,7 +15,8 @@
         <signal name="RM1" />
         <signal name="LM0" />
         <signal name="LM1" />
-        <signal name="XLXN_8" />
+        <signal name="XLXN_20" />
+        <signal name="XLXN_21" />
         <port polarity="Input" name="RX" />
         <port polarity="Input" name="CLK" />
         <port polarity="Output" name="RM0" />
@@ -51,15 +52,21 @@
             <line x2="64" y1="-64" y2="-96" x1="64" />
         </blockdef>
         <blockdef name="Decoder">
-            <timestamp>2013-5-9T13:57:40</timestamp>
+            <timestamp>2013-5-13T11:56:46</timestamp>
             <rect width="256" x="64" y="-256" height="256" />
-            <line x2="0" y1="-160" y2="-160" x1="64" />
             <line x2="0" y1="-224" y2="-224" x1="64" />
             <rect width="64" x="0" y="-236" height="24" />
             <line x2="384" y1="-96" y2="-96" x1="320" />
             <line x2="384" y1="-32" y2="-32" x1="320" />
             <line x2="384" y1="-224" y2="-224" x1="320" />
             <line x2="384" y1="-160" y2="-160" x1="320" />
+            <line x2="0" y1="-160" y2="-160" x1="64" />
+        </blockdef>
+        <blockdef name="ClockDiv64">
+            <timestamp>2013-5-13T11:57:9</timestamp>
+            <rect width="256" x="64" y="-64" height="64" />
+            <line x2="0" y1="-32" y2="-32" x1="64" />
+            <line x2="384" y1="-32" y2="-32" x1="320" />
         </blockdef>
         <block symbolname="AsyncRx" name="AsyncRx0">
             <blockpin signalname="CLK" name="CLK" />
@@ -77,12 +84,16 @@
             <blockpin signalname="XLXN_2" name="G" />
         </block>
         <block symbolname="Decoder" name="MotorDecoder">
-            <blockpin signalname="CLK" name="CLK" />
             <blockpin signalname="XLXN_7(5:0)" name="I(5:0)" />
             <blockpin signalname="LM0" name="LF" />
             <blockpin signalname="LM1" name="LR" />
             <blockpin signalname="RM0" name="RF" />
             <blockpin signalname="RM1" name="RR" />
+            <blockpin signalname="XLXN_21" name="SCLK" />
+        </block>
+        <block symbolname="ClockDiv64" name="ClockDivider">
+            <blockpin signalname="CLK" name="CLK" />
+            <blockpin signalname="XLXN_21" name="DIV64" />
         </block>
     </netlist>
     <sheet sheetnum="1" width="2720" height="1760">
@@ -93,46 +104,52 @@
             <wire x2="944" y1="368" y2="368" x1="800" />
         </branch>
         <branch name="XLXN_2">
-            <wire x2="944" y1="496" y2="640" x1="944" />
+            <wire x2="944" y1="496" y2="528" x1="944" />
         </branch>
         <branch name="RX">
             <wire x2="416" y1="368" y2="368" x1="240" />
         </branch>
         <iomarker fontsize="28" x="240" y="368" name="RX" orien="R180" />
         <iomarker fontsize="28" x="240" y="496" name="CLK" orien="R180" />
+        <branch name="XLXN_7(5:0)">
+            <wire x2="1552" y1="368" y2="368" x1="1328" />
+        </branch>
         <branch name="CLK">
             <wire x2="384" y1="496" y2="496" x1="240" />
             <wire x2="416" y1="496" y2="496" x1="384" />
             <wire x2="384" y1="496" y2="624" x1="384" />
             <wire x2="848" y1="624" y2="624" x1="384" />
-            <wire x2="1376" y1="624" y2="624" x1="848" />
+            <wire x2="384" y1="624" y2="816" x1="384" />
+            <wire x2="960" y1="816" y2="816" x1="384" />
             <wire x2="944" y1="432" y2="432" x1="848" />
             <wire x2="848" y1="432" y2="624" x1="848" />
-            <wire x2="1392" y1="432" y2="432" x1="1376" />
-            <wire x2="1376" y1="432" y2="624" x1="1376" />
-        </branch>
-        <instance x="1392" y="592" name="MotorDecoder" orien="R0">
-            <attrtext style="fontsize:28;fontname:Arial" attrname="InstName" x="128" y="32" type="instance" />
-        </instance>
-        <branch name="XLXN_7(5:0)">
-            <wire x2="1392" y1="368" y2="368" x1="1328" />
         </branch>
         <branch name="RM0">
-            <wire x2="1904" y1="368" y2="368" x1="1776" />
+            <wire x2="2064" y1="368" y2="368" x1="1936" />
         </branch>
         <branch name="RM1">
-            <wire x2="1904" y1="432" y2="432" x1="1776" />
+            <wire x2="2064" y1="432" y2="432" x1="1936" />
         </branch>
         <branch name="LM0">
-            <wire x2="1904" y1="496" y2="496" x1="1776" />
+            <wire x2="2064" y1="496" y2="496" x1="1936" />
         </branch>
         <branch name="LM1">
-            <wire x2="1904" y1="560" y2="560" x1="1776" />
+            <wire x2="2064" y1="560" y2="560" x1="1936" />
         </branch>
-        <iomarker fontsize="28" x="1904" y="368" name="RM0" orien="R0" />
-        <iomarker fontsize="28" x="1904" y="432" name="RM1" orien="R0" />
-        <iomarker fontsize="28" x="1904" y="496" name="LM0" orien="R0" />
-        <iomarker fontsize="28" x="1904" y="560" name="LM1" orien="R0" />
-        <instance x="880" y="768" name="XLXI_6" orien="R0" />
+        <instance x="1552" y="592" name="MotorDecoder" orien="R0">
+            <attrtext style="fontsize:28;fontname:Arial" attrname="InstName" x="128" y="32" type="instance" />
+        </instance>
+        <iomarker fontsize="28" x="2064" y="368" name="RM0" orien="R0" />
+        <iomarker fontsize="28" x="2064" y="432" name="RM1" orien="R0" />
+        <iomarker fontsize="28" x="2064" y="496" name="LM0" orien="R0" />
+        <iomarker fontsize="28" x="2064" y="560" name="LM1" orien="R0" />
+        <instance x="880" y="656" name="XLXI_6" orien="R0" />
+        <instance x="960" y="848" name="ClockDivider" orien="R0">
+        </instance>
+        <branch name="XLXN_21">
+            <wire x2="1440" y1="816" y2="816" x1="1344" />
+            <wire x2="1440" y1="432" y2="816" x1="1440" />
+            <wire x2="1552" y1="432" y2="432" x1="1440" />
+        </branch>
     </sheet>
 </drawing>
