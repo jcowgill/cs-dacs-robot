@@ -3,18 +3,18 @@ NET "CLK"       LOC = "P44";
 #NET "CLR"       LOC = "P33";
 
 # BUFFERED INPUTS
-#NET "RX"        LOC = "P39";
+NET "RX"        LOC = "P39";
 #NET "WRX1"      LOC = "P40";
 #NET "WRX2"      LOC = "P41";
 #NET "WRX3"      LOC = "P42";
 
 # LED
-#NET "LED(0)"    LOC = "P18";
-#NET "LED(1)"    LOC = "P16";
-#NET "LED(2)"    LOC = "P14";
-#NET "LED(3)"    LOC = "P13";
-#NET "LED(4)"    LOC = "P12";
-#NET "LED(5)"    LOC = "P8";
+NET "LED(0)"    LOC = "P18";
+NET "LED(1)"    LOC = "P16";
+NET "LED(2)"    LOC = "P14";
+NET "LED(3)"    LOC = "P13";
+NET "LED(4)"    LOC = "P12";
+NET "LED(5)"    LOC = "P8";
 #NET "LED(6)"    LOC = "P7";
 #NET "LED(7)"    LOC = "P6";
 
